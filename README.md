@@ -2,8 +2,7 @@
 
 ## Create a project
 
-1.  Start minishift
-    Open a Commandline console
+1.  Start minishift at a Commandline console
 
     ```bash
      minishift start
@@ -47,7 +46,7 @@
 1. click on Browse Catalog
    ![Browse Catalog](docImages/browseCatalog.jpg)
 
-1. Click on Databases tab and select Mongo and click on MongoDB
+1. Click on Databases tab and select Mongo and then click on MongoDB
    ![](docImages/mongo.jpg)
 
 1. Take all default settings, click on Next and then Create.
@@ -87,7 +86,7 @@ The node application takes environment variables to confugure the database conne
 1. Add a path "/env" to the application url, the application prints out all environment variables it can access.
    ![](docImages/app3.jpg)
 
-1. Now, let's create some new environment vaiables and bind them to Mongo DB secrets. Go back to minishift web console, click on nodejs-ex Deployment Config
+1. Now, let's create some new environment vaiables and bind them to Mongo DB secrets. Go back to minishift web console, click on nodejs-ex under Deployment Config
    ![](docImages/deploy1.jpg)
 
 1. Select on Environment tab and add a environment variable for database service name, DATABASE_SERVICE_NAME = mongodb
