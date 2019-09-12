@@ -113,3 +113,22 @@ The node application takes environment variables to confugure the database conne
    ![](docImages/app4.jpg)
 1. Go to the env page again, you should see the new variables are listed in the page.
    ![](docImages/app5.jpg)
+1. You can examine the secrets by oc commands
+   ```bash
+     oc login -u system:admin  # login as admin
+     oc oc project cascon-oc-config # swtich to the project
+     oc get secrets # list all secretes under the current project
+     oc get secret mongodb -o yaml # get mongodb secret contents in yaml
+   ```
+   You should see the mongodb secret contents in yaml like this
+   ![](docImages/secretyaml.jpg)
+1. If you are familar with Kubernetes commands, you can see the secrets by kubectl as well
+
+   ```bash
+    kubectl get namespace  # an openshift project has its own namespace
+    kubectl get secrets -n cascon-oc-config # list all secretes under   the project of cascon-oc-config
+    kubectl get secret mongodb -o yaml  -n cascon-oc-config # get mongodb secret contents in yaml
+   ```
+
+   You should see the same yaml contents from oc command
+   ![](docImages/secretyaml2.jpg)
