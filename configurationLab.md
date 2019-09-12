@@ -77,7 +77,7 @@
 
 The node application takes environment variables to confugure the database connection, we want to set these environment variables from OpenShift secrets.
 
-1. Let take a look at the application before we set environment variables. Go to minshift web console, expand nodejs-ex application and click on the url under Route
+1. Let's take a look at the application before we set environment variables. Go to minshift web console, expand nodejs-ex application and click on the url under Route
    ![](docImages/app1.jpg)
 
 1. After the application is open in a new tab, you can see the database is not configued
@@ -116,7 +116,7 @@ The node application takes environment variables to confugure the database conne
 1. You can examine the secrets by oc commands
    ```bash
      oc login -u system:admin  # login as admin
-     oc oc project cascon-oc-config # swtich to the project
+     oc project cascon-oc-config # swtich to the project
      oc get secrets # list all secretes under the current project
      oc get secret mongodb -o yaml # get mongodb secret contents in yaml
    ```
